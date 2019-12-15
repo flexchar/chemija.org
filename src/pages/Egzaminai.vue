@@ -14,21 +14,8 @@
             ],
         },
         computed: {
-            examsCached() {
-                const EXAM_CACHE_KEY = 'exams';
-                const ls = localStorage.getItem(EXAM_CACHE_KEY);
-
-                if (ls) {
-                    return JSON.parse(ls);
-                }
-
-                const { edges } = this.$page.exams;
-                localStorage.setItem(EXAM_CACHE_KEY, JSON.stringify(edges));
-
-                return edges;
-            },
             exams() {
-                return this.examsCached.map(
+                return this.$page.exams.edges.map(
                     ({
                         node: {
                             _id,
