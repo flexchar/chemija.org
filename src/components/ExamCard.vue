@@ -1,14 +1,11 @@
 <template>
-    <div class="Aborder-t-8 rounded bg-white p-2">
-        <div
-            class="bg-white text-center -m-2 py-1 font-bold"
-            :class="getRandomBorder()"
-        >
+    <div class="rounded bg-white p-2">
+        <div class="text-center -m-2 py-1 font-bold" :class="getRandomBorder()">
             {{ exam.year }}
         </div>
         <div class="py-3">
             <p>
-                metų chemijos
+                {{ exam.year }} metų chemijos
                 <b>{{ exam.level.toLowerCase() }}</b>
                 brandos egzaminas -
                 {{ exam.session.toLowerCase() }}
@@ -53,18 +50,18 @@
         methods: {
             getRandomColor() {
                 const colors = [
-                    'black',
-                    'white',
+                    // 'black',
+                    // 'white',
                     'gray',
-                    // 'red',
-                    // 'orange',
-                    // 'yellow',
-                    // 'green',
-                    // 'teal',
-                    // 'blue',
-                    // 'indigo',
-                    // 'purple',
-                    // 'pink',
+                    'red',
+                    'orange',
+                    'yellow',
+                    'green',
+                    'teal',
+                    'blue',
+                    'indigo',
+                    'purple',
+                    'pink',
                 ];
                 return colors[Math.floor(Math.random() * colors.length)];
             },
