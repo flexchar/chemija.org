@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="grid mb-4" style="--css-grid-minmax: 250px">
+        <div class="grid mb-4" style="--css-grid-minmax: 250px;">
             <article
                 v-for="{ node: article } in articles"
                 :key="article.id"
@@ -119,4 +119,4 @@
             }
         }
     }
-</page-query> 
+</page-query>
