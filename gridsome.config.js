@@ -9,6 +9,9 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     siteName: 'Chemija.org',
+    metadata: {
+        siteSlogan: `Chemija.org 2.0`,
+    },
     siteDescription: 'Chemijos ir kitų gamtos mokslų mėgėjų svetainė',
     templates: {
         SanityArticle: '/:slug__current',

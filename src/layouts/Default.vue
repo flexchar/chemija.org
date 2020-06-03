@@ -1,12 +1,13 @@
 <template>
     <div class="flex flex-col h-full">
-        <header class="py-4 border-b mb-6">
+        <header class="py-4 border-b mb-6 md:sticky top-0 z-10 bg-white">
             <div class="container flex items-center justify-between">
                 <a href="/" class="md:w-1/4 w-1/3">
                     <img
                         class="banner"
                         src="/banner.png"
-                        :alt="$static.metadata.siteName"
+                        :alt="$static.meta.siteDescription"
+                        :title="$static.meta.siteSlogan"
                     />
                 </a>
                 <nav class="nav">
@@ -24,19 +25,32 @@
 
         <footer class="border-t py-10 mt-5">
             <div class="container flex justify-between">
-                <p>© 2019 Chemija.org</p>
-                <p>Lukas Vanagas 🍦</p>
+                <p>
+                    ©
+                    <time
+                        :datetime="new Date().toISOString()"
+                        :title="`Atnaujinta ${new Date().toLocaleString('lt')}`"
+                    >
+                        {{ new Date().getFullYear() }}
+                    </time>
+                    Chemija.org
+                </p>
+                <a href="https://github.com/flexchar/" target="_blank">
+                    Lukas Vanagas 🍦
+                </a>
             </div>
         </footer>
     </div>
 </template>
 
 <static-query>
-query {
-    metadata {
-        siteName
+    query {
+        meta: metadata {
+            siteName
+            siteDescription
+            siteSlogan
+        }
     }
-}
 </static-query>
 
 <style lang="scss">
