@@ -85,16 +85,7 @@
         },
         computed: {
             articles() {
-                const ls = localStorage.getItem('topArticles');
-
-                if (ls) {
-                    return JSON.parse(ls);
-                }
-
-                const articles = this.$page.articles.edges;
-                localStorage.setItem('topArticles', JSON.stringify(articles));
-
-                return articles;
+                return this.$page.articles.edges;
             },
         },
         components: {
