@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const sanityConfig = require('./sanity.config');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     siteName: 'Chemija.org',
@@ -19,8 +20,8 @@ module.exports = {
                 ...sanityConfig,
                 token:
                     'skjDhoRSV1UqoGjmjgY0F34bLZSp9FgbUrN19FNhoR4JQIhNgBfB4kgHHZ5iqheZR3oQSXLRwwv1AbLOFi40QuuPFWCYr62xRL704IMCdtftMfudSkhe2BOH41goAttgL4XbBh8ZCGPvSgeQDfLuSkCDAn01qE8ExH2lZMylAVc9kXScXrKF',
-                overlayDrafts: process.env.development,
-                watchMode: process.env.development,
+                overlayDrafts: !isProduction,
+                watchMode: !isProduction,
             },
         },
         {
@@ -29,7 +30,7 @@ module.exports = {
                 tailwindConfig: './tailwind.config.js',
                 purgeConfig: {},
                 presetEnvConfig: {},
-                shouldPurge: process.env.production,
+                shouldPurge: isProduction,
                 shouldImport: true,
                 shouldTimeTravel: true,
                 shouldPurgeUnusedKeyframes: true,
