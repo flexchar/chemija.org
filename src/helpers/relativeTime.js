@@ -1,4 +1,6 @@
 export default dateString => {
+    if (process.isServer) return dateString;
+
     const date = new Date(dateString);
 
     if (isNaN(date)) {
