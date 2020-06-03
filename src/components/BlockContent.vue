@@ -35,6 +35,17 @@
                                 <figcaption>{node.caption}</figcaption>
                             </figure>
                         ),
+                        undefined: ({ node }) => {
+                            return node.toString();
+                        },
+                    },
+
+                    marks: {
+                        //
+                        super: ({ node }) => {
+                            console.log(node);
+                            return 'WIP: for <super />';
+                        },
                     },
                 },
             };
@@ -43,12 +54,12 @@
 </script>
 
 <static-query>
-{
-    metadata {
-        sanityOptions {
-            projectId
-            dataset
+    {
+        metadata {
+            sanityOptions {
+                projectId
+                dataset
+            }
         }
     }
-}
 </static-query>
