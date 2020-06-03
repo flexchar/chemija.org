@@ -33,21 +33,21 @@
 </script>
 
 <page-query>
-query Article($id: ID!) {
-    # metadata {
-    #   sanityOptions {
-    #     projectId
-    #     dataset
-    #   }
-    # }
-    article: sanityArticle(id: $id) {
-        title
-        _createdAt(format: "MM, YYYY")
-        categories {
-            id
+    query Article($id: ID!) {
+        # metadata {
+        #   sanityOptions {
+        #     projectId
+        #     dataset
+        #   }
+        # }
+        article: sanityArticle(id: $id) {
             title
+            _createdAt(format: "MM, YYYY")
+            categories {
+                id
+                title
+            }
+            _rawBody
         }
-        _rawBody
     }
-}
 </page-query>
