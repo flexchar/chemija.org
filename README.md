@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad9ed84e-64f9-4c1c-b53b-31cbb9463d77/deploy-status)](https://app.netlify.com/sites/chemija-org/deploys)
+
 # Default starter for Gridsome
 
 This is the project you get when you run `gridsome create new-project`.
