@@ -45,7 +45,11 @@ module.exports = function (api) {
 
         const redirectsText = Object.entries(urls).reduce(
             (prev, [from, to]) => {
-                return `${prev} /${from} ${to} ${REDIRECT_CODE} \n`;
+                // Prevent empty redirects
+                if (from && to) {
+                    return `${prev} /${from} ${to} ${REDIRECT_CODE} \n`;
+                }
+                return prev;
             },
             ''
         );
