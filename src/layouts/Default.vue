@@ -78,7 +78,8 @@
     }
     body {
         font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-            Roboto, 'Helvetica Neue', Arial, sans-serif;
+            Roboto, Noto Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial,
+            sans-serif;
         line-height: 1.5;
 
         margin: 0;
