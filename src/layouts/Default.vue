@@ -1,6 +1,9 @@
 <template>
     <div class="flex flex-col h-full">
-        <header class="py-4 border-b mb-6 md:sticky top-0 z-10 bg-white">
+        <header
+            class="py-4 border-b mb-6 bg-white"
+            :class="{ 'md:sticky top-0 z-20': stickyHeader }"
+        >
             <div class="container flex items-center justify-between">
                 <a href="/" class="md:w-1/4 w-1/3">
                     <img
@@ -19,7 +22,7 @@
             </div>
         </header>
 
-        <section class="container flex-1">
+        <section class="container flex-1" :class="containerClass">
             <slot />
         </section>
 
@@ -42,6 +45,21 @@
         </footer>
     </div>
 </template>
+
+<script>
+    export default {
+        props: {
+            containerClass: {
+                type: String,
+                default: null,
+            },
+            stickyHeader: {
+                type: Boolean,
+                default: true,
+            },
+        },
+    };
+</script>
 
 <static-query>
     query {
