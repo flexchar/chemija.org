@@ -87,7 +87,7 @@
                         v-for="exam in exams"
                         :exam="exam"
                         :key="exam._id"
-                        class="mb-12"
+                        class="mb-8"
                     ></exam-card>
                 </div>
             </div>
