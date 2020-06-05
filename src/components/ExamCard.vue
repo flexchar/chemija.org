@@ -1,8 +1,5 @@
 <template>
-    <div class="rounded bg-white p-2">
-        <div class="text-center -m-2 py-1 font-bold" :class="getRandomBorder()">
-            {{ exam.year }}
-        </div>
+    <div class="bg-white p-2 border-t-8 rounded" :class="getRandomBorder()">
         <div class="py-3">
             <p>
                 {{ exam.year }} metų chemijos
@@ -12,7 +9,7 @@
             </p>
             <blockquote
                 v-if="exam.notes"
-                class="p-1 px-2 border-l-4 border-red-900 rounded bg-gray-200 flex"
+                class="flex p-1 px-2 border-l-4 border-red-900 rounded bg-gray-200"
             >
                 <em>{{ exam.notes }}</em>
             </blockquote>
@@ -70,7 +67,7 @@
                 return lums[Math.floor(Math.random() * lums.length)];
             },
             getRandomBorder() {
-                return `bg-${this.getRandomColor()}-${this.getRandomLightness()}`;
+                return `border-${this.getRandomColor()}-${this.getRandomLightness()}`;
             },
         },
     };
