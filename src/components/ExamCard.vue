@@ -15,9 +15,9 @@
             </blockquote>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex">
             <a
-                class="py-2 px-4 rounded bg-gray-200"
+                class="py-2 px-4 rounded bg-gray-200 hover:bg-gray-600 hover:text-white mr-2"
                 :href="exam.questions"
                 target="_blank"
             >
@@ -25,7 +25,7 @@
             </a>
             <a
                 v-if="exam.answers"
-                class="py-2 px-4 rounded bg-gray-200"
+                class="py-2 px-4 rounded bg-gray-200 hover:bg-gray-600 hover:text-white"
                 :href="exam.answers"
                 target="_blank"
             >
