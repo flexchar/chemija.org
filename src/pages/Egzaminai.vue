@@ -87,6 +87,7 @@
 </template>
 
 <script>
+    import computeExams from '@/helpers/computeExams';
     export default {
         name: 'Egzaminai',
         metaInfo: {
@@ -119,30 +120,7 @@
         },
         computed: {
             exams() {
-                return this.$page.exams.edges.map(
-                    ({
-                        node: {
-                            _id,
-                            year,
-                            level,
-                            session,
-                            answers,
-                            questions,
-                            notes,
-                        },
-                    }) => {
-                        return {
-                            _id,
-                            year,
-                            level,
-                            session,
-                            notes,
-                            questions: questions.asset.url,
-                            answers:
-                                answers && answers.asset && answers.asset.url,
-                        };
-                    }
-                );
+                return computeExams(this.$page.exams.edges);
             },
         },
     };
