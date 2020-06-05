@@ -5,14 +5,14 @@
             :class="{ 'md:sticky top-0 z-20': stickyHeader }"
         >
             <div class="container flex items-center justify-between">
-                <a href="/" class="md:w-1/4 w-1/3">
+                <g-link to="/" class="md:w-1/4 w-1/3">
                     <img
                         class="banner"
                         src="/banner.png"
                         :alt="$static.meta.siteDescription"
                         :title="$static.meta.siteSlogan"
                     />
-                </a>
+                </g-link>
                 <nav class="nav">
                     <g-link class="nav__link" to="/egzaminai">Egzaminai</g-link>
                     <g-link class="nav__link" to="/straipsniai">
