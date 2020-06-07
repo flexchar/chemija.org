@@ -6,7 +6,11 @@ export default function exams(edges) {
                     ? node.questions
                     : node.questions.asset.url;
             node.answers =
-                node.answers && node.answers.asset && node.answers.asset.url;
+                typeof node.answers === 'string'
+                    ? node.answers
+                    : node.answers &&
+                      node.answers.asset &&
+                      node.answers.asset.url;
         }
 
         return node;
