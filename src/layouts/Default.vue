@@ -100,4 +100,8 @@
             color: steelblue;
         }
     }
+
+    mark {
+        @apply border-b-8 border-green-500 bg-transparent;
+    }
 </style>
