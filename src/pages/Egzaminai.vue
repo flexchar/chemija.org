@@ -59,7 +59,7 @@
                             :href="
                                 !download
                                     ? exam.questions
-                                    : exam.questions + '?dl=1'
+                                    : getDonwloadLink(exam)
                             "
                             target="_blank"
                         >
@@ -73,7 +73,7 @@
                             :href="
                                 !download
                                     ? exam.answers
-                                    : exam.answers + '?dl=1'
+                                    : getDonwloadLink(exam, 1)
                             "
                             target="_blank"
                         >
@@ -121,6 +121,17 @@
         computed: {
             exams() {
                 return computeExams(this.$page.exams.edges);
+            },
+        },
+        methods: {
+            getDonwloadLink(exam, isAnswers = false) {
+                const name = `${exam.year} chemijos ${exam.level} egzaminas ${
+                    exam.session
+                } - ${isAnswers ? 'atsakymai' : 'užduotys'}`;
+
+                const url = !isAnswers ? exam.questions : exam.answers;
+
+                return url + '?dl=' + name.toLowerCase();
             },
         },
     };
