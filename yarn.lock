@@ -1003,7 +1003,7 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.140.0.tgz#f60ab75be5fdc346b9f0d1c2a0858aa3c2870109"
   integrity sha512-H/G/WA9S22TXcXST52CIiTsHx3S2hH0gvK7LnI5w76vfKS0obnDPh8jrPg4xeNRYGPuV9MHYRlyERGpRGoo4Qw==
 
-"@sanity/image-url@^0.140.15":
+"@sanity/image-url@^0.140.15", "@sanity/image-url@^0.140.19":
   version "0.140.19"
   resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-0.140.19.tgz#6adfea7b7768a1708eba6bdcfe9eb0746d2bb1f9"
   integrity sha512-itPCTXNyF2MFdXMlwmpcXEiZU7AvSxyQpOaCQ3x8uODIl3GY22KAHYzz6rIGzWU63u0DN/Y8O1ChsblPLqnI5Q==
@@ -3635,7 +3635,7 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.2
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.2.0.tgz#74415ac884874495f78ec2a97349525344c981fa"
   integrity sha512-WFb4ihckKil6hu3Dp798xdzSfddwKKU3+nGniKF6HfeW6OLd2OUDEPP7TcHtB5+QXOKg2s6B2DaMPE1Nn/kxKQ==
 
-eslint@^7.1.0:
+eslint@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.2.0.tgz#d41b2e47804b30dbabb093a967fb283d560082e6"
   integrity sha512-B3BtEyaDKC5MlfDa2Ha8/D6DsS4fju95zs0hjS3HdGazw+LNayai38A25qMppK37wWGWNYSPOR6oYzlz5MHsRQ==
@@ -4693,7 +4693,7 @@ gridsome-source-sanity@^1.0.5:
     split2 "^3.1.1"
     through2 "^3.0.1"
 
-gridsome@^0.7.16:
+gridsome@^0.7.17:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.17.tgz#c15fc04d26ce9ff635d956c23358498d87b672dd"
   integrity sha512-3Kooras77KNNO2lmRndrhlvJpH7UYZNO9BfKJmZXHAQrWXRHZKKBmdFHJISjfUfvArsiYiJjcVXXsTxEpNDHcw==
@@ -8522,7 +8522,7 @@ sass-loader@^8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sass@^1.26.7:
+sass@^1.26.8:
   version "1.26.8"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.8.tgz#312652530721f9568d4c4000b0db07ec6eb23325"
   integrity sha512-yvtzyrKLGiXQu7H12ekXqsfoGT/aTKeMDyVzCB675k1HYuaj0py63i8Uf4SI9CHXj6apDhpfwbUr3gGOjdpu2Q==
