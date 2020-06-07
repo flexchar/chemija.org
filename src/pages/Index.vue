@@ -68,8 +68,9 @@
             </div>
 
             <p class="mb-16">
-                Nesinerk iš kailio - didžiausias chemijos egzaminų archyvas
-                padės tau pasiruošti ir sužibėti!
+                Didžiausias chemijos egzaminų archyvas padės tau
+                <mark>PASIRUOŠTI EGZAMINUI</mark>
+                ir gliaudyti užduotis it riešutus!
             </p>
 
             <div class="flex flex-col sm:flex-row pb-8">
