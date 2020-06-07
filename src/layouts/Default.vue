@@ -38,9 +38,17 @@
                     </time>
                     Chemija.org
                 </p>
-                <a href="https://github.com/flexchar/" target="_blank">
-                    Lukas Vanagas 🍦
-                </a>
+                <p>
+                    <a href="https://github.com/flexchar/" target="_blank">
+                        Lukas Vanagas
+                    </a>
+                    <a
+                        href="https://github.com/flexchar/chemija.org"
+                        target="_blank"
+                    >
+                        🍦
+                    </a>
+                </p>
             </div>
         </footer>
     </div>
