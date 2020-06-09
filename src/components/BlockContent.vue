@@ -35,17 +35,29 @@
                                 <figcaption>{node.caption}</figcaption>
                             </figure>
                         ),
-                        undefined: ({ node }) => {
-                            return node.toString();
+                        youtube: ({ node }) => {
+                            const { url } = node;
+
+                            const id = (url.split('watch?v=')[1] || '').split(
+                                '&'
+                            )[0];
+
+                            return (
+                                <div class="videoWrapper">
+                                    <iframe
+                                        class={'py-4'}
+                                        type="text/html"
+                                        src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0`}
+                                        allowfullscreen
+                                        frameborder="0"></iframe>
+                                </div>
+                            );
                         },
                     },
 
                     marks: {
-                        //
-                        super: ({ node }) => {
-                            console.log(node);
-                            return 'WIP: for <super />';
-                        },
+                        sub: node => <sub>{node.children}</sub>,
+                        sup: node => <sup>{node.children}</sup>,
                     },
                 },
             };
