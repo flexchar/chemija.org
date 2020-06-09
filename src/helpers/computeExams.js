@@ -4,7 +4,9 @@ export default function exams(edges) {
             node.questions =
                 typeof node.questions === 'string'
                     ? node.questions
-                    : node.questions.asset.url;
+                    : node.questions &&
+                      node.questions.asset &&
+                      node.questions.asset.url;
             node.answers =
                 typeof node.answers === 'string'
                     ? node.answers
