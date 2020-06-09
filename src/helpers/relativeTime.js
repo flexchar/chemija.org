@@ -1,13 +1,11 @@
 export default dateString => {
-    if (process.isServer) return dateString;
-
     const date = new Date(dateString);
 
     if (isNaN(date)) {
         return 'faulty date provided: ' + dateString;
     }
 
-    if ('Intl' in window) {
+    if ('Intl' in globalThis) {
         const daysDiff = Math.round((date - new Date()) / (24 * 3600 * 1000));
         const yearsDiff = Math.round(daysDiff / 365);
         const monthsDiff = Math.round(yearsDiff * 12);
@@ -27,5 +25,5 @@ export default dateString => {
         return intlRelative.format(daysDiff, 'day');
     }
 
-    return date.toLocaleDateString();
+    return date.toLocaleDateString('lt');
 };
