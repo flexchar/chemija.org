@@ -66,6 +66,9 @@
 
     export default {
         name: 'Straipsniai',
+        metaInfo: {
+            title: 'Straipsniai',
+        },
         computed: {
             articles() {
                 return this.$page.articles.edges.reverse();
