@@ -80,6 +80,8 @@
 </static-query>
 
 <style lang="scss">
+    @import '@/sass';
+
     html,
     body {
         height: 100%;
