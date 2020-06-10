@@ -18,6 +18,9 @@
                     <g-link class="nav__link" to="/straipsniai">
                         Straipsniai
                     </g-link>
+                    <g-link class="nav__link" to="/cheminis-skaiciuotuvas">
+                        Skaičiuoklis
+                    </g-link>
                 </nav>
             </div>
         </header>
