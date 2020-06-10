@@ -42,10 +42,7 @@
         >
             Skaičiuoti
         </button>
-        <button
-            class="px-4 py-2 bg-green-500 hover:bg-green-400 text-white mt-4"
-            @click="resetDegrees"
-        >
+        <button class="px-4 hover:text-gray-800 mt-4" @click="resetDegrees">
             Išvalyti
         </button>
     </section>
