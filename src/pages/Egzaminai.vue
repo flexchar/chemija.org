@@ -55,6 +55,7 @@
                     </td>
                     <td class="px-2 md:px-6 py-4">
                         <a
+                            v-if="exam.questions"
                             class="hover:text-green-600 font-semibold block"
                             :href="
                                 !download
