@@ -39,5 +39,8 @@ module.exports = {
                 shouldPurgeUnusedKeyframes: true,
             },
         },
+        {
+            use: 'gridsome-plugin-typescript',
+        },
     ],
 };
