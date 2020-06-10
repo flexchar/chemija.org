@@ -6,7 +6,7 @@
                 class="p-2 border w-full"
                 placeholder="Na + H2O2 = NaOH"
                 v-model="equation"
-                @keyup="balance"
+                @keyup.enter="balance"
             />
         </label>
 
