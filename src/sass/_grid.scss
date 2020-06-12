@@ -1,9 +1,0 @@
-.grid {
-    display: grid;
-    grid-gap: 1rem;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(var(--css-grid-minmax, 350px), 1fr)
-    );
-}
