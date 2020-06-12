@@ -43,13 +43,40 @@
 
             <hr class="my-8" />
 
+            <!--  Molar mass calculator  -->
+            <section class="flex flex-col md:flex-row mb-8">
+                <div class="w-full md:w-1/3 mr-4 mb-8">
+                    <h2 class="pb-4">
+                        Molinės masės skaičiavimas
+                    </h2>
+                    <p class="font-light mb-2">
+                        Pagal lygtį:
+                        <span>
+                            <abbr title="medžiagos kiekis, mol">n</abbr>
+                            =
+                            <abbr title="medžiagos masė, g">m</abbr>
+                            :
+                            <abbr title="molinė masė, g/mol">M</abbr>
+                        </span>
+                    </p>
+                    <p class="text-sm font-light">
+                        Pildydami, palikite vieną iš trijų langelių tusčią
+                    </p>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <molar-mass-calculator />
+                </div>
+            </section>
+
+            <hr class="my-8" />
+
             <!--  Concentration calculator  -->
             <section class="flex flex-col md:flex-row mb-8">
                 <div class="w-full md:w-1/3 mr-4 mb-8">
                     <h2 class="pb-4">
                         Molinės koncentracijos skaičiavimas
                     </h2>
-                    <p class="font-light Atext-sm mb-2">
+                    <p class="font-light mb-2">
                         Pagal lygtį:
                         <span>
                             <abbr title="tirpalo koncentracija, mol/l">
@@ -67,7 +94,7 @@
                         A - ištirpusi medžiaga
                     </p>
                     <p class="text-sm font-light">
-                        Įvesti du žinomus skaičius
+                        Pildydami, palikite vieną iš trijų langelių tusčią
                     </p>
                 </div>
                 <div class="w-full md:w-2/3">
@@ -80,6 +107,7 @@
 
 <script>
     import Balancer from '@/components/math/ChemicalBalancer';
+    import MolarMassCalculator from '@/components/math/MolarMassCalculator';
     import TemperatureConverter from '@/components/math/TemperatureConverter';
     import ConcentrationCalculator from '@/components/math/ConcentrationCalculator';
     export default {
@@ -108,6 +136,7 @@
         },
         components: {
             Balancer,
+            MolarMassCalculator,
             TemperatureConverter,
             ConcentrationCalculator,
         },
