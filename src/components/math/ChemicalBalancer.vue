@@ -3,7 +3,7 @@
         <label class="block mb-4">
             <input
                 type="text"
-                class="p-2 border w-full"
+                class="p-2 border w-full focus:border-gray-500"
                 placeholder="Na + H2O2 = NaOH"
                 v-model="equation"
                 @keyup.enter="balance"
@@ -14,11 +14,10 @@
 
         <div class="mt-4">
             <button
-                class="px-4 py-2 bg-green-500 text-white mr-4"
-                @click="balance"
+                class="mt-4 mr-4 py-2 px-4 rounded bg-white border border-gray-400 text-gray-700"
                 :class="{
-                    'bg-green-800 cursor-not-allowed': !equation,
-                    'hover:bg-green-400': equation,
+                    'opacity-50 cursor-not-allowed': !equation,
+                    'hover:border-gray-600': equation,
                 }"
                 :disabled="!equation"
             >
@@ -26,13 +25,16 @@
             </button>
 
             <button
-                class="px-4 py-2 hover:text-gray-800"
+                class="px-4 py-2 hover:text-gray-600 mt-4"
                 @click="provideRandom"
             >
                 Rodyti pavyzdį
             </button>
 
-            <button class="px-4 hover:text-gray-800" @click="equation = ''">
+            <button
+                class="px-4 py-2 hover:text-gray-600 mt-4"
+                @click="equation = ''"
+            >
                 Išvalyti
             </button>
         </div>

@@ -9,7 +9,9 @@
                     <h2 class="pb-4">
                         Temperatūros konvertavimas
                     </h2>
-                    <p class="text-sm">Rašykite tik į vieną laukelį</p>
+                    <p class="text-sm font-light">
+                        Rašykite tik į vieną laukelį
+                    </p>
                 </div>
                 <div class="w-full md:w-2/3">
                     <temperature-converter />
@@ -24,10 +26,10 @@
                     <h2 class="pb-4">
                         Reakcijų lygintuvas
                     </h2>
-                    <p class="text-sm mb-2">
+                    <p class="text-sm mb-2 font-light">
                         Chemijos reackijos lygčių lyginimas
                     </p>
-                    <p class="text-sm">
+                    <p class="text-sm font-light">
                         Elektronai rašomi su ^ ženklu,
                         <br />
                         Na^+ yra tas pats kas Na

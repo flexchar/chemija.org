@@ -1,48 +1,48 @@
 <template>
     <section>
-        <label class="block mb-4">
-            <span class="block">Farenheito, °F</span>
+        <label class="block mb-4 text-gray-700">
+            Farenheito, °F
             <input
                 type="number"
                 step="0.0001"
-                class="p-2 border w-full"
+                class="p-2 border w-full focus:border-gray-500"
                 @keyup.enter="calculate"
-                v-model="degrees.fahrenheit"
+                v-model.number="degrees.fahrenheit"
             />
         </label>
-        <label class="block mb-4">
-            <span class="block">Celsijaus, °C</span>
+        <label class="block mb-4 text-gray-700">
+            Celsijaus, °C
             <input
                 type="number"
                 step="0.0001"
-                class="p-2 border w-full"
+                class="p-2 border w-full focus:border-gray-500"
                 @keyup.enter="calculate"
-                v-model="degrees.celsius"
+                v-model.number="degrees.celsius"
             />
         </label>
-        <label class="block mb-4">
-            <span class="block">Kelvino, K</span>
+        <label class="block mb-4 text-gray-700">
+            Kelvino, K
             <input
                 type="number"
                 step="0.0001"
-                class="p-2 border w-full"
+                class="p-2 border w-full focus:border-gray-500"
                 @keyup.enter="calculate"
-                v-model="degrees.kelvin"
+                v-model.number="degrees.kelvin"
             />
         </label>
 
         <button
-            class="px-4 py-2 bg-green-500 text-white mt-4 mr-4"
+            class="mt-4 mr-4 py-2 px-4 rounded bg-white border border-gray-400 text-gray-700"
             :class="{
-                'bg-green-800 cursor-not-allowed': isEmpty,
-                'hover:bg-green-400': !isEmpty,
+                'opacity-50 cursor-not-allowed': isEmpty,
+                'hover:border-gray-600': !isEmpty,
             }"
             @click="calculate"
             :disabled="isEmpty"
         >
             Skaičiuoti
         </button>
-        <button class="px-4 hover:text-gray-800 mt-4" @click="resetDegrees">
+        <button class="px-4 py-2 hover:text-gray-600 mt-4" @click="reset">
             Išvalyti
         </button>
     </section>
@@ -62,11 +62,14 @@
         },
         computed: {
             isEmpty() {
-                return Object.values(this.degrees).filter(Boolean).length === 0;
+                return (
+                    Object.values(this.degrees).filter(val => val !== null)
+                        .length === 0
+                );
             },
         },
         methods: {
-            resetDegrees() {
+            reset() {
                 this.degrees = {
                     fahrenheit: null,
                     celsius: null,
