@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="grid mb-4" style="--css-grid-minmax: 250px;">
+        <div class="grid grid-cols-3 gap-4 mb-4">
             <article
                 v-for="{ node: article } in articles"
                 :key="article.id"
