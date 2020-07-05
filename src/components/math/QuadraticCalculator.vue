@@ -113,8 +113,7 @@
         return parseFloat(Math.round(num * 100) / 100);
     }
 
-    // Original adapted from code sourced from
-    // https://www.javascriptkit.com/script/cut42.shtml
+    // Adapted from http://javascriptkit.com/script/script2/quadratic_cal.shtml
     export default {
         name: 'quadratic-calculator',
         data() {
