@@ -117,4 +117,9 @@
     mark {
         @apply border-b-8 border-green-500 bg-transparent;
     }
+
+    sup,
+    sub {
+        margin-left: -3px;
+    }
 </style>
