@@ -58,8 +58,10 @@
                 <span v-html="equation"></span>
             </dt>
 
-            <dd>Diskriminantas: {{ discriminant }}</dd>
-            <dd class="mb-4">Diskriminanto šaknis: {{ discriminantRoot }}</dd>
+            <dd>Diskriminantas: {{ discriminant | round }}</dd>
+            <dd class="mb-4">
+                Diskriminanto šaknis: {{ discriminantRoot | round }}
+            </dd>
 
             <!-- <dd class="mb-4">
                 x
@@ -233,6 +235,9 @@
                 this.results.answer4 = e_val;
                 this.results.answer5 = sec_dx + ', ' + sec_dy;
             },
+        },
+        filters: {
+            round,
         },
     };
 </script>
