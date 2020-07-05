@@ -43,6 +43,26 @@
 
             <hr class="my-8" />
 
+            <!--  Quadratic calculator  -->
+            <section class="flex flex-col md:flex-row mb-8">
+                <div class="w-full md:w-1/3 mr-4 mb-8">
+                    <h2 class="pb-4">
+                        Kvadratinių lygčių skaičiuotuvas
+                    </h2>
+                    <p class="font-light mb-2">
+                        Pagal lygtį:
+                        <span>
+                            ax
+                            <sup>2</sup>
+                            + bx + c = 0
+                        </span>
+                    </p>
+                </div>
+                <quadratic-calculator class="w-full md:w-2/3" />
+            </section>
+
+            <hr class="my-8" />
+
             <!--  Molar mass calculator  -->
             <section class="flex flex-col md:flex-row mb-8">
                 <div class="w-full md:w-1/3 mr-4 mb-8">
@@ -108,6 +128,7 @@
 <script>
     import Balancer from '@/components/math/ChemicalBalancer';
     import MolarMassCalculator from '@/components/math/MolarMassCalculator';
+    import QuadraticCalculator from '@/components/math/QuadraticCalculator';
     import TemperatureConverter from '@/components/math/TemperatureConverter';
     import ConcentrationCalculator from '@/components/math/ConcentrationCalculator';
     export default {
@@ -137,6 +158,7 @@
         components: {
             Balancer,
             MolarMassCalculator,
+            QuadraticCalculator,
             TemperatureConverter,
             ConcentrationCalculator,
         },
