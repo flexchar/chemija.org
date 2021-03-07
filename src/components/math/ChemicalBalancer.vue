@@ -50,7 +50,8 @@
         name: 'balancer',
         data() {
             return {
-                equation: '',
+                equation:
+                    'C6H6N2O2 + 2 H2SO4 = 2 NOx + CO2 + C + 2 SO2 + 2 H2O',
                 result: '',
             };
         },

@@ -12,6 +12,7 @@ function balance(formulaStr: string): string {
     // Clear output
     const output = document.createElement('div');
     const codeOutput = document.createElement('pre');
+    console.trace(formulaStr);
 
     // Parse equation
     let eqn: Equation;
@@ -20,10 +21,12 @@ function balance(formulaStr: string): string {
     } catch (e) {
         if (typeof e == 'string') {
             // Simple error message string
+            console.trace('ERR');
             return 'Sintaksės klaida: ' + e;
         } else if ('start' in e) {
             // Error message object with start and possibly end character indices
 
+            console.log('he');
             const start: number = e.start;
             let end: number = 'end' in e ? e.end : e.start;
             while (
@@ -32,6 +35,8 @@ function balance(formulaStr: string): string {
             )
                 end--; // Adjust position to eliminate whitespace
             if (start == end) end++;
+
+            console.trace('1');
 
             codeOutput.textContent += formulaStr.substring(0, start);
             if (end <= formulaStr.length) {
@@ -45,14 +50,18 @@ function balance(formulaStr: string): string {
                 );
             } else codeOutput.appendChild(createElem('u', ' '));
 
+            console.trace('END');
+
             output.innerHTML = `<p>${e.message}</p>`;
             output.appendChild(codeOutput);
             return output.innerHTML;
         } else {
             // return 'Assertion error';
+            console.trace('ERR');
             return 'Sistemos klaida';
         }
     }
+    console.trace('123');
 
     try {
         // Set up matrix
@@ -66,6 +75,7 @@ function balance(formulaStr: string): string {
         // Display balanced equation
         output.appendChild(eqn.toHtml(coefs));
 
+        console.trace('456');
         return output.innerHTML;
     } catch (e) {
         return e.toString();
