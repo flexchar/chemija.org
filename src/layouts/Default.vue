@@ -43,7 +43,7 @@
                 </p>
                 <p>
                     <a href="https://github.com/flexchar/" target="_blank">
-                        Lukas Vanagas
+                        Lukas Vá
                     </a>
                     <a
                         href="https://github.com/flexchar/chemija.org"
