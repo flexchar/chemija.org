@@ -42,7 +42,7 @@
                     Chemija.org
                 </p>
                 <p>
-                    <a href="https://github.com/flexchar/" target="_blank">
+                    <a href="https://instagram.com/flexeye/" target="_blank">
                         Lukas Vá
                     </a>
                     <a
